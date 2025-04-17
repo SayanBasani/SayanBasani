@@ -18,9 +18,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="inconsolata-new" >
+<body class="inconsolata-new">
+
+  <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+
   <div>
-    <button onclick="toggleDarkMode()" class="f_buttons border-white p-2 rounded-full absolute bottom-2 left-2">
+    <button onclick="toggleDarkMode()" class=" f_buttons border-white p-2 rounded-full absolute bottom-2 left-2">
       <i class="bi bi-moon-stars-fill"></i>
       <!-- <i class="bi bi-brightness-high-fill"></i>   -->
     </button>
@@ -48,13 +65,29 @@
       </div>
 
       <div class="text-center grid gap-4">
-        <h2 class="max-text-3xl text-5xl font-bold typing-demo mx-auto ">
+        <h2 class="max-text-3xl text-5xl font-bold  mx-auto cursor typewriter-animation">
+          <!-- <h2 class="max-text-3xl text-5xl font-bold typing-demo mx-auto "> -->
           Sayan Basani
         </h2>
         <div class="max-text-xl text-xl grid gap-2">
-          <span class="whitespace-nowra">
+          <!-- <span class="whitespace-nowra">
+            Full Stack Developer | Web Developer | Programmer
+          </span> -->
+          <span class="whitespace-nowrap inline">
             Full Stack Developer | Web Developer | Programmer
           </span>
+
+
+          <!-- Slide-in text animations -->
+          <div class="hidden flex justify-center items-center">
+            <div class="dropping-texts fonts_side_in">
+              <div>Developer</div>
+              <div>Designers</div>
+              <div>Programmer</div>
+            </div>
+          </div>
+
+
           <span class="">
             Email :
             <a href="mailto:sayan.basani2004@gmail.com" class="text-blue-500 underline">
@@ -70,8 +103,14 @@
       <div class="About-Me border-white mt-5">
         <h1 class="font-sembold max-text-mxl text-2xl text-gray-400">About Me:</h1>
         <div class="grid gap-2">
-          <span>
+          <span class="">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- Gradient typing effect -->
+            <!-- <div class="Gradient_container">
+              <h1>Hi, my name is</h1>
+              <h1>Sayan.</h1>
+            </div> -->
+            <!-- Gradient typing effect !! -->
             Passionate about software development with expertise in Python, Django, React, JavaScript, Tailwind CSS, and
             C. I enjoy building scalable and efficient applications, specializing in web development, AI-powered
             assistants, and management systems, with a focus on both front-end and back-end technologies.
@@ -90,24 +129,26 @@
       </div>
       <div class="">
         <h1 class="relative  font-sembold max-text-mxl text-2xl text-gray-400 mb-5 ">Projects:</h1>
-        
+
         <div class="borde border-white px-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 rounded-lg">
-        
-          <div class="mx-auto bg-blue-700 w-min px-5 py-3 rounded-lg transition-transform duration-300 transform hover:scale-110">
-            Ecomers
-          </div>
-          <div class="mx-auto bg-blue-700 w-min px-5 py-3 rounded-lg transition-transform duration-300 transform hover:scale-110">
+
+          <a href="https://chat-forntent.onrender.com/" target="_blank"
+            class="whitespace-nowrap inline mx-auto bg-blue-700 w-min px-5 py-3 rounded-lg transition-transform duration-300 transform hover:scale-110">
+            CHAT APP
+          </a>
+          <a href="#"
+            class="mx-auto bg-blue-700 w-min px-5 py-3 rounded-lg transition-transform duration-300 transform hover:scale-110">
             Portfolio
-          </div>
-          
+        </a>
+
         </div>
       </div>
-      
+
       <footer class="bg-gray-900 text-white py-6 mt-10">
         <div class="container mx-auto flex flex-col items-center justify-center gap-4">
           <!-- Social Media Links -->
           <div class="flex gap-6">
-            <a href="https://facebook.com" target="_blank" class="text-2xl hover:text-blue-500">
+            <a href="https://facebook.com/" target="_blank" class="text-2xl hover:text-blue-500">
               <i class="bi bi-facebook"></i>
             </a>
             <a href="https://github.com/SayanBasani" target="_blank" class="text-2xl hover:text-gray-400">
@@ -120,13 +161,13 @@
               <i class="bi bi-envelope-fill"></i>
             </a>
           </div>
-      
+
           <!-- Footer Text -->
           <p class="text-sm text-gray-400">&copy; 2024 Sayan Basani. All rights reserved.</p>
         </div>
       </footer>
     </main>
-    
+
 
   </div>
 </body>

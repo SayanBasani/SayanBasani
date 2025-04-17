@@ -49,7 +49,7 @@
 }
 
 .menu_bright {
-/* .side-bar { */
+  /* .side-bar { */
   background-color: rgb(237, 239, 245);
   color: rgb(5, 5, 5);
   /* border: 1px solid rgb(5, 5, 5); */
@@ -65,7 +65,7 @@
 
 .typing-demo {
   width: 22ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -75,12 +75,387 @@
 
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 }
-    
+
 @keyframes blink {
   50% {
-    border-color: transparent
+    border-color: transparent;
   }
+}
+/* for typing animation on name */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Cursor */
+.cursor {
+  position: relative;
+  width: 14em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 30px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+/* Animation */
+.typewriter-animation {
+  animation: typewriter 5s steps(50) 1s 1 normal both,
+    blinkingCursor 500ms steps(20) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkingCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* for typing animation on name!! */
+
+/* for side-in text animatiom */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+.fonts_side_in {
+  font-size:20px;
+  font-weight:100;
+  overflow:hidden;
+  animation:bg 5s linear infinite;
+}
+
+.dropping-texts {
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  height: 36px;
+  vertical-align: -2px;
+}
+
+.dropping-texts > div {
+  font-size:0px;
+  opacity:0;
+  position:absolute;
+  font-weight:300;   
+  box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+}
+
+.dropping-texts > div:nth-child(1) {
+  animation: roll 5s linear infinite 0s;
+}
+.dropping-texts > div:nth-child(2) {
+  animation: roll 5s linear infinite 1s;
+}
+.dropping-texts > div:nth-child(3) {
+  animation: roll 5s linear infinite 2s;
+}
+.dropping-texts > div:nth-child(4) {
+  animation: roll2 5s linear infinite 3s;
+}
+
+@keyframes roll {
+  0% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  20% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+  27% {
+    font-size:0px;
+    opacity:0.5;
+    margin-left:20px;
+    margin-top:100px;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes roll2 {
+  0% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  30% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+  37% {
+    font-size:1500px;
+    opacity:0;
+    margin-left:-1000px;
+    margin-top:-800px;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(15deg);
+  }
+}
+/* for side-in text animatiom!! */
+
+/* gradient typing effect */
+
+.Gradient_container{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* margin-top: 100px; */
+  display: flex;
+}
+
+.Gradient_container h1:nth-child(1) {
+  color: #355c7d;
+  font-family: 'Fira Code', monospace;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 0 0 0 35%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 170px;
+  animation: type 2s steps(40,end) forwards;
+}
+
+.Gradient_container h1:nth-child(2) {
+  opacity: 0;
+  margin: 0 auto auto auto;
+  background: linear-gradient(to right, #f8b195, #f67280, #c06c84);
+  font-weight: 800;
+  font-size: 30px;  
+  width: 100px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  animation: shring-animation 2.2s steps(10,end) 2s forwards, blink .5s step-end infinite alternate;
+}
+
+@keyframes shring-animation {
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+    width: 0;
+  }
+  1% {
+    background-position: 0 0;
+    opacity: 1;
+    border-right: 1px solid orange;
+  }
+  50% {
+    background-position: 150px 0;
+    opacity: 1;
+    border-right: 1px solid orange;
+  }
+  100% {
+    background-position: 400px 0;
+    opacity: 1;
+    border-right: 1px solid orange;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  1%, 99%{
+    border-right: 1px solid orange;
+  }
+  100%{
+    border-right: none;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* gradient typing effect!! */
+
+/* background with bolls */
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1; /* Push it behind other content */
+}
+
+.background span {
+  width: 9vmin;
+  height: 9vmin;
+  border-radius: 9vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 41s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0) {
+  color: #e45a84;
+  top: 66%;
+  left: 91%;
+  animation-duration: 51s;
+  animation-delay: -78s;
+  transform-origin: -11vw 2vh;
+  box-shadow: -18vmin 0 2.499928592657688vmin currentColor;
+}
+.background span:nth-child(1) {
+  color: #e45a84;
+  top: 85%;
+  left: 80%;
+  animation-duration: 53s;
+  animation-delay: -86s;
+  transform-origin: 1vw -12vh;
+  box-shadow: -18vmin 0 2.621228561309193vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #e45a84;
+  top: 66%;
+  left: 3%;
+  animation-duration: 31s;
+  animation-delay: -48s;
+  transform-origin: 12vw -16vh;
+  box-shadow: -18vmin 0 2.3606411865690307vmin currentColor;
+}
+.background span:nth-child(3) {
+  color: #cb7e08;
+  top: 76%;
+  left: 91%;
+  animation-duration: 49s;
+  animation-delay: -84s;
+  transform-origin: -13vw -9vh;
+  box-shadow: 18vmin 0 2.5785139962458437vmin currentColor;
+}
+.background span:nth-child(4) {
+  color: #583c87;
+  top: 48%;
+  left: 56%;
+  animation-duration: 6s;
+  animation-delay: -43s;
+  transform-origin: -23vw 4vh;
+  box-shadow: -18vmin 0 2.945736313648184vmin currentColor;
+}
+.background span:nth-child(5) {
+  color: #cb7e08;
+  top: 61%;
+  left: 41%;
+  animation-duration: 50s;
+  animation-delay: -86s;
+  transform-origin: 25vw 10vh;
+  box-shadow: 18vmin 0 2.552065611385967vmin currentColor;
+}
+.background span:nth-child(6) {
+  color: #cb7e08;
+  top: 78%;
+  left: 36%;
+  animation-duration: 28s;
+  animation-delay: -44s;
+  transform-origin: 19vw -7vh;
+  box-shadow: -18vmin 0 2.5544402334338527vmin currentColor;
+}
+.background span:nth-child(7) {
+  color: #ffacac;
+  top: 66%;
+  left: 22%;
+  animation-duration: 9s;
+  animation-delay: -23s;
+  transform-origin: 0vw -21vh;
+  box-shadow: -18vmin 0 2.591059474255233vmin currentColor;
+}
+.background span:nth-child(8) {
+  color: #ffacac;
+  top: 28%;
+  left: 55%;
+  animation-duration: 23s;
+  animation-delay: -61s;
+  transform-origin: -8vw -16vh;
+  box-shadow: 18vmin 0 2.739243987831438vmin currentColor;
+}
+.background span:nth-child(9) {
+  color: #583c87;
+  top: 17%;
+  left: 13%;
+  animation-duration: 86s;
+  animation-delay: -75s;
+  transform-origin: 15vw 3vh;
+  box-shadow: 18vmin 0 2.65858628585037vmin currentColor;
+}
+.background span:nth-child(10) {
+  color: #ffacac;
+  top: 80%;
+  left: 71%;
+  animation-duration: 56s;
+  animation-delay: -3s;
+  transform-origin: 20vw 4vh;
+  box-shadow: -18vmin 0 2.926139099252528vmin currentColor;
+}
+.background span:nth-child(11) {
+  color: #cb7e08;
+  top: 99%;
+  left: 47%;
+  animation-duration: 36s;
+  animation-delay: -56s;
+  transform-origin: 25vw -19vh;
+  box-shadow: -18vmin 0 3.127755882059298vmin currentColor;
 }
